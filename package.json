@@ -1,0 +1,29 @@
+{
+  "name": "the-gamer",
+  "version": "1.0.0",
+  "description": "Simulates \"The Gamer\" web comic interface.",
+  "main": "./src/index.js",
+  "scripts": {
+    "babel-node": "babel-node --presets=env",
+    "knex": "babel-node node_modules/.bin/knex",
+    "start": "env=development nodemon --exec npx babel-node -- ./src/index.js",
+    "build": "babel src -d dist",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "acronoth",
+  "license": "ISC",
+  "dependencies": {
+    "babel-preset-env": "^1.6.1",
+    "body-parser": "^1.18.2",
+    "cookie-parser": "^1.4.3",
+    "express": "^4.16.2",
+    "knex": "^0.14.3",
+    "morgan": "^1.9.0",
+    "mysql": "^2.15.0",
+    "pug": "^2.0.0-rc.4",
+    "rimraf": "^2.6.2"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0"
+  }
+}
