@@ -27,6 +27,7 @@ app.set(
   'views',
   path.join(__dirname, '../app/templates')
 )
+app.locals.basedir = app.get('views')
 app.set('view engine', 'pug')
 
 /*
@@ -37,7 +38,7 @@ app.use(logger('dev'))
 /*
   Static path
 */
-app.use(express.static(path.join(__dirname, 'static')))
+app.use(express.static(path.join(__dirname, '../static')))
 
 /*
   Knex
